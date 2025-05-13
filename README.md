@@ -1,22 +1,3 @@
-## Introduction
-
-This repository contains my unofficial reimplementation of the standard [ECAPA-TDNN](https://arxiv.org/pdf/2005.07143.pdf), which is the speaker recognition in VoxCeleb2 dataset.
-
-This repository is modified based on [voxceleb_trainer](https://github.com/clovaai/voxceleb_trainer).
-
-## Best Performance in this project (with AS-norm)
-
-| Dataset |  Vox1_O  |  Vox1_E  |  Vox1_H  |
-| ------- |  ------  |  ------  |  ------  |
-|  EER    |   0.86   |  1.18    |  2.17    |
-|  minDCF |  0.0686  | 0.0765   |  0.1295  |
-
-Notice, this result is in the Vox1_O clean list, for Vox1_O Noise list: EER is 1.00 and minDCF is 0.0713.
-***
-
-## System Description
-
-I have uploaded the [system description](https://arxiv.org/pdf/2111.06671.pdf), please check the Session 3, `ECAPA-TDNN SYSTEM`.
 
 ### Dependencies
 
@@ -84,40 +65,6 @@ We also update the score.txt file in `exps/pretrain_score.txt`, it contains the 
 
 ***
 
-
-### Reference
-
-Original ECAPA-TDNN paper
-```
-@inproceedings{desplanques2020ecapa,
-  title={{ECAPA-TDNN: Emphasized Channel Attention, propagation and aggregation in TDNN based speaker verification}},
-  author={Desplanques, Brecht and Thienpondt, Jenthe and Demuynck, Kris},
-  booktitle={Interspeech 2020},
-  pages={3830--3834},
-  year={2020}
-}
-```
-
-Our reimplement report
-```
-@article{das2021hlt,
-  title={HLT-NUS SUBMISSION FOR 2020 NIST Conversational Telephone Speech SRE},
-  author={Das, Rohan Kumar and Tao, Ruijie and Li, Haizhou},
-  journal={arXiv preprint arXiv:2111.06671},
-  year={2021}
-}
-```
-
-VoxCeleb_trainer paper
-```
-@inproceedings{chung2020in,
-  title={In defence of metric learning for speaker recognition},
-  author={Chung, Joon Son and Huh, Jaesung and Mun, Seongkyu and Lee, Minjae and Heo, Hee Soo and Choe, Soyeon and Ham, Chiheon and Jung, Sunghwan and Lee, Bong-Jin and Han, Icksang},
-  booktitle={Interspeech},
-  year={2020}
-}
-```
-
 ### Acknowledge
 
 We study many useful projects in our codeing process, which includes:
@@ -132,12 +79,4 @@ We study many useful projects in our codeing process, which includes:
 
 Thanks for these authors to open source their code!
 
-### Notes
 
-If you meet the problems about this repository, **Please ask me from the 'issue' part in Github (using English) instead of sending the messages to me from bilibili, so others can also benifit from it.** Thanks for your understanding!
-
-If you improve the result based on this repository by some methods, please let me know. Thanks!
-
-### Cooperation
-
-If you are interested to work on this topic and have some ideas to implement, I am glad to collaborate and contribute with my experiences & knowlegde in this topic. Please contact me with ruijie.tao@u.nus.edu.
