@@ -15,23 +15,7 @@ Start from the existing environment
 pip install -r requirements.txt
 ```
 
-### Data preparation
 
-Please follow the official code to perpare your VoxCeleb2 dataset from the 'Data preparation' part in [this repository](https://github.com/clovaai/voxceleb_trainer).
-
-Dataset for training usage: 
-
-1) VoxCeleb2 training set;
-
-2) MUSAN dataset;
-
-3) RIR dataset.
-
-Dataset for evaluation: 
-
-1) VoxCeleb1 test set for [Vox1_O](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/veri_test2.txt) 
-
-2) VoxCeleb1 train set for [Vox1_E](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_all2.txt) and [Vox1_H](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/list_test_hard2.txt) (Optional)
 
 ### Training
 
@@ -47,23 +31,7 @@ The result will be saved in `exps/exp1/score.txt`. The model will saved in `exps
 
 In my case, I trained 80 epoches in one 3090 GPU. Each epoch takes 37 mins, the total training time is about 48 hours.
 
-### Pretrained model
 
-Our pretrained model performs `EER: 0.96` in Vox1_O set without AS-norm, you can check it by using: 
-
-```
-python trainECAPAModel.py --eval --initial_model exps/pretrain.model
-```
-
-With AS-norm, this system performs `EER: 0.86`. We will not update this code recently since no enough time for this work. I suggest you the following paper if you want to add AS-norm or other norm methods:
-
-```
-Matejka, Pavel, et al. "Analysis of Score Normalization in Multilingual Speaker Recognition." INTERSPEECH. 2017.
-```
-
-We also update the score.txt file in `exps/pretrain_score.txt`, it contains the training loss, training acc and EER in Vox1_O in each epoch for your reference.
-
-***
 
 ### Acknowledge
 
